@@ -16,7 +16,7 @@ def check_password():
         with st.form("Credentials"):
             # 布局调整
             cols = st.columns([0.6, 0.4, 2])
-            cols[1].image(".\pics\数据赋能 数据应用.png", width=66)
+            cols[1].image("./pics/数据赋能 数据应用.png", width=66)
             cols[2].markdown("## 数据工具箱")
 
             # 输入字段
