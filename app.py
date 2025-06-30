@@ -34,8 +34,11 @@ def logout():# 侧边栏 账号登出管理
     st.rerun()  # 重新运行应用
 
 pages = {
-    "使用说明": [st.Page("page1.py", title="说明")],
-    "产能负荷率": [st.Page("page2.py", title="数据处理")],
+    "物料耗用": [st.Page("page1.py", title="耗用数据统计")],
+    # "库存现有量": [st.Page("page3.py", title="库存数据处理")],
+    "产能负荷率": [st.Page("page2.py", title="台班数据处理")],
+    # "成品异常库存": [st.Page("page4.py", title="成品库存处理")],
+    # "物料异常库存": [st.Page("page5.py", title="物料库存处理")],
     "登出账号": [st.Page(logout, title="退出登陆", icon=":material/logout:")]
 }
 # 创建导航组件
