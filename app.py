@@ -55,8 +55,3 @@ if pg.title != st.session_state['current_page']:
 
 # 显示当前页面
 pg.run()
-
-# 侧边栏显示登录状态
-# if is_logged_in:
-#     with st.sidebar:
-#         st.success("已登录")
