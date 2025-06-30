@@ -6,3 +6,6 @@ streamlit==1.41.1
 openpyxl==3.1.5
 pymysql == 1.1.1
 sqlalchemy == 2.0.41
+cryptography == 45.0.4
+pycparser == 2.22
+cffi == 1.17.1 
