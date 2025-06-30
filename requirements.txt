@@ -5,3 +5,4 @@ seaborn==0.13.2
 streamlit==1.41.1
 openpyxl==3.1.5
 pymysql == 1.1.1
+sqlalchemy == 2.0.41
