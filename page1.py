@@ -49,7 +49,7 @@ with st.container(border=True):
             org = '洗护'
             query3 = f''' SELECT c.MCode '物料编码', c.MCategory '物料类别' FROM `category` c  WHERE c.`Org`='{org}' AND c.MCategory IN ('原辅料','包材')'''
         df_category = dp1.execute_query(engine, query3)
-        
+
     col4, col5, clo6 = st.columns([1, 2.5, 1])
     with col4:
         st.markdown('''
@@ -67,7 +67,8 @@ with st.container(border=True):
                 df_all = dp1.load_excel_files(uploaded_files)
                 df_all = dp1.process_data(df_all)
                 # 将两表的物料编码列转为字符串，并去除前后空格
-                df_all['物料编码'] = df_all['物料编码'].astype(int).astype(str).str.strip()
+                df_all['物料编码'] = df_all['物料编码'].apply(
+                        lambda x: str(int(x)) if isinstance(x, (int, float)) else str(x).strip())
                 df_category['物料编码'] = df_category['物料编码'].astype(str).str.strip()
                 # 连接两表保留能匹配到类别的数据
                 df_all = df_all.merge(
