@@ -9,7 +9,7 @@ if not check_password():
 if 'selected_month_str' not in st.session_state:
     st.session_state.selected_month_str = None
 
-st.subheader("产能符合率-数据处理", divider="grey")
+st.subheader("产能负荷率-数据处理", divider="grey")
 
 file1 = st.file_uploader(label="台班数据文件上传", accept_multiple_files=False, type=["xlsx"])
 if file1:

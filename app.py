@@ -1,5 +1,9 @@
 import streamlit as st
 from login import check_password
+import warnings
+
+# 忽略特定警告
+warnings.filterwarnings("ignore", category=UserWarning, message=".*Serialization of dataframe.*")
 
 
 # 检查登录状态
@@ -34,8 +38,10 @@ def logout():# 侧边栏 账号登出管理
     st.rerun()  # 重新运行应用
 
 pages = {
-    "物料耗用": [st.Page("page1.py", title="耗用数据统计")],
-    # "库存现有量": [st.Page("page3.py", title="库存数据处理")],
+    "物料耗用": [
+                st.Page("page1.py", title="口腔耗用统计"),
+                st.Page("page3.py", title="洗护耗用统计")],
+    
     "产能负荷率": [st.Page("page2.py", title="台班数据处理")],
     # "成品异常库存": [st.Page("page4.py", title="成品库存处理")],
     # "物料异常库存": [st.Page("page5.py", title="物料库存处理")],

@@ -20,7 +20,7 @@ if 'res_bc' not in st.session_state:
     st.session_state.res_bc = None
 
 # 继续子页面内容   
-st.header("物料耗用数据统计", divider="rainbow")
+st.header("口腔耗用数据统计", divider="rainbow")
 with st.expander(label='说明'):
     st.markdown('''
                 - ###### 数据来源：ERP `cux.库存事务处理查询XML` 来源名称 **5** (生产任务Job or Schedule)
